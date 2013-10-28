@@ -1,4 +1,9 @@
-require 'active_support/core_ext/class/inheritable_attributes'
+begin
+  require 'active_support/core_ext/class/inheritable_attributes'
+rescue LoadError
+  require 'active_support/core_ext/class/attribute'
+end
+
 require 'active_support/core_ext/class/attribute_accessors'
 
 module CompletenessFu
